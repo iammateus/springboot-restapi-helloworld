@@ -13,7 +13,7 @@ public class HelloWorldController {
     @GetMapping("/greeting")
     public AbstractMap<String, String> greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         HashMap<String, String> map = new HashMap<>();
-        map.put("message", "Hello world!");
+        map.put("message", "Hello " + name + "!");
         return map;
     }
 }
